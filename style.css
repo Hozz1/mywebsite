@@ -58,11 +58,6 @@ section {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-section:hover {
-  transform: scale(1.02);
 }
 
 ul li::before {
