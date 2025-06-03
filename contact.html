@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты Лабубу Store - свяжитесь с нами для получения консультации по коллекционным фигуркам">
+    <title>Контакты - Лабубу Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Лабубу</span>
+                    <span class="logo-accent">Store</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="contact.html" class="nav-link active">Контакты</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Поиск">🔍</button>
+                    <a href="cart.html" class="cart-btn">
+                        🛒 <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" aria-label="Меню">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="index.html" class="breadcrumb-link">Главная</a>
+                    <span class="breadcrumb-separator">→</span>
+                    <span class="breadcrumb-current">Контакты</span>
+                </nav>
+                <h1 class="page-title">Свяжитесь с нами</h1>
+                <p class="page-description">Мы всегда готовы помочь вам с выбором и ответить на любые вопросы</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3 class="contact-title">Телефон</h3>
+                        <p class="contact-details">
+                            <a href="tel:+79991234567" class="contact-link">+7 (999) 123-45-67</a>
+                        </p>
+                        <p class="contact-note">Ежедневно с 9:00 до 21:00</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3 class="contact-title">Email</h3>
+                        <p class="contact-details">
+                            <a href="mailto:info@labubu-store.ru" class="contact-link">info@labubu-store.ru</a>
+                        </p>
+                        <p class="contact-note">Ответим в течение 2 часов</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3 class="contact-title">Адрес</h3>
+                        <address class="contact-details">
+                            Москва, ул. Примерная, 123<br>
+                            ТЦ "Коллекционер", 2 этаж
+                        </address>
+                        <p class="contact-note">Пн-Вс: 10:00-22:00</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <h3 class="contact-title">Мессенджеры</h3>
+                        <div class="contact-details">
+                            <a href="#" class="contact-link">Telegram</a><br>
+                            <a href="#" class="contact-link">WhatsApp</a>
+                        </div>
+                        <p class="contact-note">Быстрые ответы 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="form-container">
+                        <h2 class="form-title">Напишите нам</h2>
+                        <p class="form-description">
+                            Заполните форму ниже, и мы свяжемся с вами в ближайшее время
+                        </p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">Имя *</label>
+                                    <input 
+                                        type="text" 
+                                        id="firstName" 
+                                        name="firstName" 
+                                        class="form-input" 
+                                        required
+                                        placeholder="Введите ваше имя"
+                                    >
+                                    <span class="form-error" id="firstNameError"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Фамилия</label>
+                                    <input 
+                                        type="text" 
+                                        id="lastName" 
+                                        name="lastName" 
+                                        class="form-input"
+                                        placeholder="Введите вашу фамилию"
+                                    >
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        class="form-input" 
+                                        required
+                                        placeholder="example@email.com"
+                                    >
+                                    <span class="form-error" id="emailError"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Телефон</label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        class="form-input"
+                                        placeholder="+7 (999) 123-45-67"
+                                    >
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Тема обращения *</label>
+                                <select id="subject" name="subject" class="form-select" required>
+                                    <option value="">Выберите тему</option>
+                                    <option value="order">Вопрос по заказу</option>
+                                    <option value="product">Вопрос о товаре</option>
+                                    <option value="delivery">Доставка</option>
+                                    <option value="return">Возврат/обмен</option>
+                                    <option value="cooperation">Сотрудничество</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                                <span class="form-error" id="subjectError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Сообщение *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    class="form-textarea" 
+                                    rows="5" 
+                                    required
+                                    placeholder="Опишите ваш вопрос подробнее..."
+                                ></textarea>
+                                <span class="form-error" id="messageError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <span class="checkmark"></span>
+                                    Согласен с <a href="#" class="link">политикой конфиденциальности</a> *
+                                </label>
+                                <span class="form-error" id="consentError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Хочу получать новости и специальные предложения
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Отправить сообщение
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Часто задаваемые вопросы</h3>
+                            <div class="faq-list">
+                                <details class="faq-item">
+                                    <summary class="faq-question">Как проверить подлинность фигурки?</summary>
+                                    <p class="faq-answer">
+                                        Каждая оригинальная фигурка Лабубу имеет специальную голограмму 
+                                        и сертификат подлинности. Мы также предоставляем гарантию на все товары.
+                                    </p>
+                                </details>
+                                
+                                <details class="faq-item">
+                                    <summary class="faq-question">Сколько времени занимает доставка?</summary>
+                                    <p class="faq-answer">
+                                        По Москве - 1-2 дня, по России - 3-7 дней в зависимости от региона. 
+                                        Экспресс-доставка доступна в крупных городах.
+                                    </p>
+                                </details>
+                                
+                                <details class="faq-item">
+                                    <summary class="faq-question">Можно ли вернуть товар?</summary>
+                                    <p class="faq-answer">
+                                        Да, вы можете вернуть товар в течение 14 дней с момента получения, 
+                                        если он не был распакован и сохранил товарный вид.
+                                    </p>
+                                </details>
+                                
+                                <details class="faq-item">
+                                    <summary class="faq-question">Есть ли программа лояльности?</summary>
+                                    <p class="faq-answer">
+                                        Да! За каждую покупку вы получаете бонусные баллы, которые можно 
+                                        использовать для оплаты следующих заказов.
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">Режим работы</h3>
+                            <div class="schedule">
+                                <div class="schedule-item">
+                                    <span class="schedule-day">Понедельник - Пятница</span>
+                                    <span class="schedule-time">9:00 - 21:00</span>
+                                </div>
+                                <div class="schedule-item">
+                                    <span class="schedule-day">Суббота - Воскресенье</span>
+                                    <span class="schedule-time">10:00 - 20:00</span>
+                                </div>
+                                <div class="schedule-item">
+                                    <span class="schedule-day">Онлайн-поддержка</span>
+                                    <span class="schedule-time">24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2 class="section-title">Как нас найти</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-content">
+                            <div class="map-icon">📍</div>
+                            <h3 class="map-title">Наш магазин</h3>
+                            <p class="map-address">
+                                Москва, ул. Примерная, 123<br>
+                                ТЦ "Коллекционер", 2 этаж
+                            </p>
+                            <p class="map-note">
+                                Рядом с метро "Примерная" (5 минут пешком)<br>
+                                Парковка для посетителей бесплатная
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Лабубу Store</h3>
+                    <p class="footer-description">
+                        Ваш надежный партнер в мире коллекционных фигурок. 
+                        Качество, оригинальность и забота о каждом клиенте.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Каталог</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html" class="footer-link">Все товары</a></li>
+                        <li><a href="#" class="footer-link">Новинки</a></li>
+                        <li><a href="#" class="footer-link">Скидки</a></li>
+                        <li><a href="#" class="footer-link">Лимитированные</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Информация</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">О компании</a></li>
+                        <li><a href="#" class="footer-link">Доставка</a></li>
+                        <li><a href="#" class="footer-link">Оплата</a></li>
+                        <li><a href="#" class="footer-link">Возврат</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Контакты</h4>
+                    <address class="footer-contacts">
+                        <p>📞 +7 (999) 123-45-67</p>
+                        <p>✉️ info@labubu-store.ru</p>
+                        <p>📍 Москва, ул. Примерная, 123</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Лабубу Store. Все права защищены.</p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                    <a href="#" class="footer-link">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

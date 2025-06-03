@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Корзина покупок - Лабубу Store">
+    <title>Корзина - Лабубу Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">Лабубу</span>
+                    <span class="logo-accent">Store</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li><a href="about.html" class="nav-link">О нас</a></li>
+                    <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Поиск">🔍</button>
+                    <a href="cart.html" class="cart-btn active">
+                        🛒 <span class="cart-count">2</span>
+                    </a>
+                    <button class="menu-toggle" aria-label="Меню">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="index.html" class="breadcrumb-link">Главная</a>
+                    <span class="breadcrumb-separator">→</span>
+                    <span class="breadcrumb-current">Корзина</span>
+                </nav>
+                <h1 class="page-title">Корзина покупок</h1>
+                <p class="page-description">Проверьте выбранные товары и оформите заказ</p>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <span class="step-label">Корзина</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <span class="step-label">Оформление</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <span class="step-label">Оплата</span>
+                    </div>
+                </div>
+
+                <div class="cart-layout">
+                    <div class="cart-content">
+                        <div class="cart-header">
+                            <h2 class="cart-title">Ваши товары</h2>
+                            <button class="clear-all-btn">Очистить корзину</button>
+                        </div>
+
+                        <div class="cart-items">
+                            <article class="cart-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="item1" checked>
+                                    <label for="item1" class="checkbox-custom"></label>
+                                </div>
+                                <div class="item-image">
+                                    <img src="/placeholder.svg?height=120&width=100" alt="Лабубу Классик" class="item-img">
+                                </div>
+                                <div class="item-details">
+                                    <h3 class="item-name">Лабубу Классик</h3>
+                                    <p class="item-description">Оригинальная фигурка в классическом стиле</p>
+                                    <div class="item-features">
+                                        <span class="feature-tag">Оригинал</span>
+                                        <span class="feature-tag">Размер: 8 см</span>
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="action-btn favorite-btn" title="В избранное">♡</button>
+                                        <button class="action-btn remove-btn" title="Удалить">🗑️</button>
+                                    </div>
+                                </div>
+                                <div class="item-quantity">
+                                    <label class="quantity-label">Количество:</label>
+                                    <div class="quantity-control">
+                                        <button class="quantity-btn decrease" data-action="decrease">−</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn increase" data-action="increase">+</button>
+                                    </div>
+                                    <span class="stock-info">В наличии: 15 шт.</span>
+                                </div>
+                                <div class="item-price">
+                                    <div class="price-current">2 990 ₽</div>
+                                    <div class="price-old">3 500 ₽</div>
+                                    <div class="price-discount">-15%</div>
+                                </div>
+                            </article>
+                            
+                            <article class="cart-item">
+                                <div class="item-select">
+                                    <input type="checkbox" id="item2" checked>
+                                    <label for="item2" class="checkbox-custom"></label>
+                                </div>
+                                <div class="item-image">
+                                    <img src="/placeholder.svg?height=120&width=100" alt="Лабубу Зимний" class="item-img">
+                                </div>
+                                <div class="item-details">
+                                    <h3 class="item-name">Лабубу Зимний</h3>
+                                    <p class="item-description">Зимняя коллекция с уютными аксессуарами</p>
+                                    <div class="item-features">
+                                        <span class="feature-tag new">Новинка</span>
+                                        <span class="feature-tag">Размер: 10 см</span>
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="action-btn favorite-btn" title="В избранное">♡</button>
+                                        <button class="action-btn remove-btn" title="Удалить">🗑️</button>
+                                    </div>
+                                </div>
+                                <div class="item-quantity">
+                                    <label class="quantity-label">Количество:</label>
+                                    <div class="quantity-control">
+                                        <button class="quantity-btn decrease" data-action="decrease">−</button>
+                                        <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                        <button class="quantity-btn increase" data-action="increase">+</button>
+                                    </div>
+                                    <span class="stock-info">В наличии: 8 шт.</span>
+                                </div>
+                                <div class="item-price">
+                                    <div class="price-current">3 490 ₽</div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="cart-actions">
+                            <a href="catalog.html" class="btn btn-secondary">
+                                ← Продолжить покупки
+                            </a>
+                            <div class="select-actions">
+                                <button class="select-all-btn">Выбрать все</button>
+                                <button class="remove-selected-btn">Удалить выбранные</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <aside class="cart-sidebar">
+                        <div class="order-summary">
+                            <h3 class="summary-title">Ваш заказ</h3>
+                            
+                            <div class="summary-items">
+                                <div class="summary-item">
+                                    <span class="item-count">Товары (2 шт.)</span>
+                                    <span class="item-total">6 480 ₽</span>
+                                </div>
+                                <div class="summary-item discount">
+                                    <span>Скидка</span>
+                                    <span>-510 ₽</span>
+                                </div>
+                            </div>
+                            
+                            <div class="promo-section">
+                                <h4 class="promo-title">Промокод</h4>
+                                <div class="promo-input-group">
+                                    <input type="text" class="promo-input" placeholder="Введите промокод" id="promoCode">
+                                    <button class="promo-apply-btn">Применить</button>
+                                </div>
+                                <div class="promo-suggestions">
+                                    <button class="promo-suggestion" data-code="FIRST10">FIRST10 (-10%)</button>
+                                    <button class="promo-suggestion" data-code="WINTER20">WINTER20 (-20%)</button>
+                                </div>
+                            </div>
+                            
+                            <div class="delivery-section">
+                                <h4 class="delivery-title">Доставка</h4>
+                                <div class="delivery-options">
+                                    <label class="delivery-option">
+                                        <input type="radio" name="delivery" value="free" checked>
+                                        <div class="option-content">
+                                            <div class="option-header">
+                                                <span class="option-name">Бесплатная доставка</span>
+                                                <span class="option-price">0 ₽</span>
+                                            </div>
+                                            <span class="option-time">3-5 рабочих дней</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="delivery-option">
+                                        <input type="radio" name="delivery" value="express">
+                                        <div class="option-content">
+                                            <div class="option-header">
+                                                <span class="option-name">Экспресс-доставка</span>
+                                                <span class="option-price">490 ₽</span>
+                                            </div>
+                                            <span class="option-time">1-2 рабочих дня</span>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="delivery-option">
+                                        <input type="radio" name="delivery" value="pickup">
+                                        <div class="option-content">
+                                            <div class="option-header">
+                                                <span class="option-name">Самовывоз</span>
+                                                <span class="option-price">0 ₽</span>
+                                            </div>
+                                            <span class="option-time">Сегодня после 15:00</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="summary-total">
+                                <div class="total-row">
+                                    <span class="total-label">Итого к оплате:</span>
+                                    <span class="total-price">5 970 ₽</span>
+                                </div>
+                                <div class="savings">
+                                    Вы экономите: <strong>510 ₽</strong>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-full checkout-btn" id="checkoutBtn">
+                                Перейти к оформлению
+                            </button>
+                            
+                            <div class="payment-security">
+                                <div class="security-icons">
+                                    <span class="security-icon">🔒</span>
+                                    <span class="security-text">Безопасная оплата</span>
+                                </div>
+                                <div class="payment-methods">
+                                    <span class="payment-icon">💳</span>
+                                    <span class="payment-icon">🏦</span>
+                                    <span class="payment-icon">📱</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="benefits-card">
+                            <h4 class="benefits-title">Преимущества покупки</h4>
+                            <ul class="benefits-list">
+                                <li class="benefit-item">
+                                    <span class="benefit-icon">✅</span>
+                                    <span class="benefit-text">Гарантия подлинности</span>
+                                </li>
+                                <li class="benefit-item">
+                                    <span class="benefit-icon">🚚</span>
+                                    <span class="benefit-text">Бесплатная доставка от 3000 ₽</span>
+                                </li>
+                                <li class="benefit-item">
+                                    <span class="benefit-icon">↩️</span>
+                                    <span class="benefit-text">Возврат в течение 14 дней</span>
+                                </li>
+                                <li class="benefit-item">
+                                    <span class="benefit-icon">🎁</span>
+                                    <span class="benefit-text">Подарочная упаковка</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommended-section">
+            <div class="container">
+                <h2 class="section-title">Рекомендуем также</h2>
+                <div class="recommended-grid">
+                    <article class="product-card compact">
+                        <div class="product-image">
+                            <img src="/placeholder.svg?height=200&width=160" alt="Лабубу Радужный" class="product-img">
+                            <div class="product-badge limited">Limited</div>
+                            <button class="quick-add-btn" title="Быстро добавить">+</button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Лабубу Радужный</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(203)</span>
+                            </div>
+                            <p class="product-price">
+                                <span class="price-current">4 990 ₽</span>
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card compact">
+                        <div class="product-image">
+                            <img src="/placeholder.svg?height=200&width=160" alt="Лабубу Космический" class="product-img">
+                            <button class="quick-add-btn" title="Быстро добавить">+</button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Лабубу Космический</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(156)</span>
+                            </div>
+                            <p class="product-price">
+                                <span class="price-current">5 490 ₽</span>
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card compact">
+                        <div class="product-image">
+                            <img src="/placeholder.svg?height=200&width=160" alt="Лабубу Пиратский" class="product-img">
+                            <button class="quick-add-btn" title="Быстро добавить">+</button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Лабубу Пиратский</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(94)</span>
+                            </div>
+                            <p class="product-price">
+                                <span class="price-current">3 790 ₽</span>
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card compact">
+                        <div class="product-image">
+                            <img src="/placeholder.svg?height=200&width=160" alt="Лабубу Цветочный" class="product-img">
+                            <div class="product-badge new">Новинка</div>
+                            <button class="quick-add-btn" title="Быстро добавить">+</button>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Лабубу Цветочный</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(67)</span>
+                            </div>
+                            <p class="product-price">
+                                <span class="price-current">3 290 ₽</span>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="recently-viewed">
+            <div class="container">
+                <h2 class="section-title">Недавно просмотренные</h2>
+                <div class="recently-grid">
+                    <article class="recently-item">
+                        <div class="recently-image">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Лабубу Мини" class="recently-img">
+                        </div>
+                        <div class="recently-info">
+                            <h4 class="recently-name">Лабубу Мини</h4>
+                            <p class="recently-price">1 990 ₽</p>
+                        </div>
+                        <button class="recently-add-btn">В корзину</button>
+                    </article>
+                    
+                    <article class="recently-item">
+                        <div class="recently-image">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Лабубу Светящийся" class="recently-img">
+                        </div>
+                        <div class="recently-info">
+                            <h4 class="recently-name">Лабубу Светящийся</h4>
+                            <p class="recently-price">6 990 ₽</p>
+                        </div>
+                        <button class="recently-add-btn">В корзину</button>
+                    </article>
+                    
+                    <article class="recently-item">
+                        <div class="recently-image">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Лабубу Набор" class="recently-img">
+                        </div>
+                        <div class="recently-info">
+                            <h4 class="recently-name">Лабубу Набор</h4>
+                            <p class="recently-price">12 990 ₽</p>
+                        </div>
+                        <button class="recently-add-btn">В корзину</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Лабубу Store</h3>
+                    <p class="footer-description">
+                        Ваш надежный партнер в мире коллекционных фигурок. 
+                        Качество, оригинальность и забота о каждом клиенте.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Каталог</h4>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html" class="footer-link">Все товары</a></li>
+                        <li><a href="#" class="footer-link">Новинки</a></li>
+                        <li><a href="#" class="footer-link">Скидки</a></li>
+                        <li><a href="#" class="footer-link">Лимитированные</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Информация</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">О компании</a></li>
+                        <li><a href="#" class="footer-link">Доставка</a></li>
+                        <li><a href="#" class="footer-link">Оплата</a></li>
+                        <li><a href="#" class="footer-link">Возврат</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Контакты</h4>
+                    <address class="footer-contacts">
+                        <p>📞 +7 (999) 123-45-67</p>
+                        <p>✉️ info@labubu-store.ru</p>
+                        <p>📍 Москва, ул. Примерная, 123</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Лабубу Store. Все права защищены.</p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-link">Политика конфиденциальности</a>
+                    <a href="#" class="footer-link">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
